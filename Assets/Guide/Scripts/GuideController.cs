@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering;
 using UnityEngine.UI;
 
 public enum GuideType
@@ -12,7 +13,7 @@ public enum GuideType
 [RequireComponent(typeof(RectGuide))]
 [RequireComponent(typeof(CircleGuide))]
 
-public class GuideController : MonoBehaviour
+public class GuideController : MonoBehaviour, ICanvasRaycastFilter
 {
     private CircleGuide circleGuide;
     private RectGuide rectGuide;
@@ -21,6 +22,7 @@ public class GuideController : MonoBehaviour
     public Material circleMat;
 
     private Image Mask;
+    private RectTransform target;
 
     private void Awake()
     {
@@ -41,6 +43,7 @@ public class GuideController : MonoBehaviour
 
     public void Guide(Canvas canvas, RectTransform target, GuideType type)
     {
+        this.target = target;
         switch (type)
         {
             case GuideType.Rect:
@@ -56,6 +59,16 @@ public class GuideController : MonoBehaviour
         }
 
 
+    }
+
+    public bool IsRaycastLocationValid(Vector2 sp, Camera eventCamera)
+    {
+        if(target==null)
+        {
+           return true;//事件不会渗透
+        }
+
+        return !RectTransformUtility.RectangleContainsScreenPoint(target,sp);
     }
 
 }
