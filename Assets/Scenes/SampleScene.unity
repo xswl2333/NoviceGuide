@@ -132,8 +132,10 @@ GameObject:
   - component: {fileID: 402167911}
   - component: {fileID: 402167913}
   - component: {fileID: 402167914}
+  - component: {fileID: 402167915}
+  - component: {fileID: 402167916}
   m_Layer: 5
-  m_Name: Image
+  m_Name: GuidePanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -203,7 +205,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 402167909}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 84a0095ebe2271a4da93b65b13074704, type: 3}
   m_Name: 
@@ -218,6 +220,32 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: af127434c3b449544aa07751290f4fb1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &402167915
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 402167909}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 887af2fdfaf78674394073194042e7de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rectMat: {fileID: 2100000, guid: 26daa05d22553a749a344617163b7492, type: 2}
+  circleMat: {fileID: 2100000, guid: 0790be07f82ec1e488f6c3d3d1d4e627, type: 2}
+--- !u!114 &402167916
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 402167909}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fdecf8e55b59cfa47beadc726b2edfd0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &705507993

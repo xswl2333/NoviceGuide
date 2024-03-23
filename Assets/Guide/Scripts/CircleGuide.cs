@@ -21,9 +21,4 @@ public class CircleGuide : GuideBase
         this.material.SetFloat("_Slider", r);
     }
 
-    public void Update()
-    {
-        Guide(GameObject.Find("Canvas").GetComponent<Canvas>(), GameObject.Find("Button").GetComponent<RectTransform>());
-
-    }
 }

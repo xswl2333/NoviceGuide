@@ -24,11 +24,4 @@ public class RectGuide : GuideBase
         material.SetFloat("_SliderY", height);
     }
 
-    public void Update()
-    {
-        Guide(GameObject.Find("Canvas").GetComponent<Canvas>(), GameObject.Find("Button").GetComponent<RectTransform>());
-
-    }
-
-
 }

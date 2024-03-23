@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+
+
+[RequireComponent(typeof(Image))]
 public class GuideBase : MonoBehaviour
 {
     protected Material material;//材质
@@ -12,17 +15,16 @@ public class GuideBase : MonoBehaviour
 
     protected virtual void Start()
     {
-        material = transform.GetComponent<Image>().material;
-        if (material == null)
-        {
-            throw new System.Exception("未获取到材质");
-        }
+
+
     }
 
     //引导
 
     public virtual void Guide(Canvas canvas, RectTransform target)
     {
+        material = transform.GetComponent<Image>().material;
+
         this.target = target;
         //获取中心点
 
